@@ -1,0 +1,168 @@
+{
+  "url": "https://mcp.gardenmaths.com/mcp",
+  "model": "claude-sonnet-5-5",
+  "results": [
+    {
+      "id": 1,
+      "prompt": "My raised bed is 2 m long, 1 m wide and 30 cm deep. I'll put 5 cm of gravel, then 10 cm of compost, then 15 cm of topsoil. How many litres in total, and how many 30 L bags of each?",
+      "toolCalls": [
+        "ToolSearch",
+        "raised_bed_soil"
+      ],
+      "toolErrors": 0,
+      "toolsOk": true,
+      "answerOk": true,
+      "pass": true,
+      "tokens": 92734,
+      "costUsd": 0.0763642,
+      "seconds": 12,
+      "answer": "Your bed needs **600 L in total (0.6 m³)**. That works out to 21 bags of 30 L.\n\n| Layer | Depth | Litres | 30 L bags |\n|---|---|---|---|\n| Gravel | 5 cm | 100 L | 4 |\n| Compost | 10 cm | 200 L | 7 |\n| Topsoil | 15 cm | 300 L | 10 |\n| **Total** | 30 cm | **600 L** | **21** |\n\n- **Bags:** each material is rounded up to whole bags, so you'll have a little left over of each.\n- **Settling:** these are exact volumes with no allowance added. Fresh soil mixes settle, so the calculator suggests adding 10–15% extra, especially for the compost and topsoil.\n- **Cost:** I haven't priced this. If you give me your local bag price, bulk price per m³ and delivery fee, I can compare bagged with bulk."
+    },
+    {
+      "id": 2,
+      "prompt": "For that same 2 m by 1 m, 30 cm deep bed (5 cm gravel, 10 cm compost, 15 cm topsoil): bags cost $9 each, or bulk soil is $85 per cubic metre plus $70 delivery. Which is cheaper?",
+      "toolCalls": [
+        "ToolSearch",
+        "raised_bed_soil"
+      ],
+      "toolErrors": 0,
+      "toolsOk": true,
+      "answerOk": true,
+      "pass": true,
+      "tokens": 92922,
+      "costUsd": 0.07766419999999999,
+      "seconds": 11,
+      "answer": "**Bulk is cheaper**, by $68.00.\n\nThe bed needs 600 L (0.600 m³) in total:\n- Gravel: 100 L\n- Compost: 200 L\n- Topsoil: 300 L\n\n| Option | Calculation | Cost (AUD) |\n|---|---|---|\n| Bagged | 21 bags of 30 L at $9.00 (4 gravel, 7 compost, 10 topsoil) | **$189.00** |\n| Bulk | 0.600 m³ at $85.00 plus $70.00 delivery | **$121.00** |\n\n- **Settling:** These are exact volumes with no allowance. Fresh soil settles, so add 10–15% extra. Bulk stays cheaper with that allowance, because the extra volume costs only about $5–8 more.\n- **Bag size:** The bag count assumes 30 L bags, the tool's default. If your $9 bags are a different size, the bagged total changes. Tell me the size and I'll recalculate.\n- **Confirm with your supplier:** The tool gives an estimate only, so check quantities before you buy."
+    },
+    {
+      "id": 3,
+      "prompt": "How much potting mix do I need for two square pots, 60 by 25 cm inside and 27 cm deep, filled to 90%? How many 25 L bags is that?",
+      "toolCalls": [
+        "ToolSearch",
+        "potting_mix"
+      ],
+      "toolErrors": 0,
+      "toolsOk": true,
+      "answerOk": true,
+      "pass": true,
+      "tokens": 91706,
+      "costUsd": 0.07231040000000001,
+      "seconds": 8,
+      "answer": "You need **72.9 L** of potting mix in total, which is **3 bags of 25 L**.\n\n- Each pot needs 36.5 L, filled to 90%.\n- Three bags give 75 L, so you'll have about 2 L left over.\n\nThis is an estimate, so check quantities with your supplier before you buy."
+    },
+    {
+      "id": 4,
+      "prompt": "How many 60 L bags of mulch do I need for a 4 m by 2 m garden bed, 75 mm deep?",
+      "toolCalls": [
+        "ToolSearch",
+        "area_material"
+      ],
+      "toolErrors": 0,
+      "toolsOk": true,
+      "answerOk": true,
+      "pass": true,
+      "tokens": 92206,
+      "costUsd": 0.07413800000000001,
+      "seconds": 10,
+      "answer": "You need **10 bags** of 60 L mulch.\n\n- The bed is 8.00 m² (4 m × 2 m) at 75 mm deep.\n- That works out to 0.600 m³, or 600 L.\n- 600 L ÷ 60 L gives exactly 10 bags.\n\nThis figure has no allowance for settling or uneven ground. GardenMaths suggests adding 10% for that, which would take you to about 660 L, or 11 bags. If your bed isn't perfectly level, buy the extra bag.\n\nI can compare bagged with bulk delivery if you give me your local prices."
+    },
+    {
+      "id": 5,
+      "prompt": "I need topsoil for a new lawn area 10 m by 6 m, 100 mm deep. How many tonnes is that, and how many loads in a 6x4 box trailer?",
+      "toolCalls": [
+        "ToolSearch",
+        "area_material"
+      ],
+      "toolErrors": 0,
+      "toolsOk": true,
+      "answerOk": true,
+      "pass": true,
+      "tokens": 92487,
+      "costUsd": 0.0758824,
+      "seconds": 9,
+      "answer": "For a 10 m × 6 m lawn area (60 m²) at 100 mm deep, you need:\n\n- **Volume:** 6.0 m³ (6,000 L)\n- **Weight:** about **7.8 tonnes**, using 1.3 t/m³ for moist topsoil\n- **Trailer loads:** **16 loads** in a 6x4 box trailer. That assumes a 750 kg rated trailer with about 250 kg tare, which leaves a 500 kg payload.\n\n**Things to check:**\n- Soil delivered wet can weigh about a fifth more. That could push the load count up, so check your trailer's plate and local road rules.\n- The figures include no allowance for settling. Adding 15% for settling and compaction would take it to about 6.9 m³, or roughly 9 tonnes.\n- At 16+ trips, bulk delivery by truck is probably worth pricing. A tipper truck would handle 7.8 t in one drop.\n\nI can re-run it with the settling allowance, or compare bulk and bagged costs if you give me local prices."
+    },
+    {
+      "id": 6,
+      "prompt": "What vegetables can I plant in Melbourne in October?",
+      "toolCalls": [
+        "ToolSearch",
+        "planting_calendar",
+        "frost_risk"
+      ],
+      "toolErrors": 0,
+      "toolsOk": true,
+      "answerOk": true,
+      "pass": true,
+      "tokens": 94070,
+      "costUsd": 0.0857078,
+      "seconds": 15,
+      "answer": "October is a good month in Melbourne, which is in the Cool zone. GardenMaths lists 34 crops you can sow or plant now.\n\n**Fruiting crops**\n- Tomato (seedlings), ready around December. Space 50–60 cm and stake.\n- Capsicum, chilli and eggplant (seedlings), ready around January.\n- Cucumber, zucchini, pumpkin and sweet corn (sow direct). The window has just opened for all four.\n- Rockmelon and watermelon (seed or seedlings).\n\n**Peas and beans**\n- Beans (sow direct). The window has just opened.\n- Peas and snow peas (sow direct). This is the last month to sow them.\n\n**Leafy greens**\n- Lettuce, rocket, silverbeet and celery.\n- English spinach (sow direct). This is the last month to sow it.\n\n**Cabbage family** (seedlings)\n- Broccoli, Brussels sprouts and cauliflower (windows just opened).\n- Cabbage.\n\n**Roots and tubers**\n- Beetroot, carrot, parsnip, radish and turnip.\n- Seed potatoes (space 25–40 cm).\n\n**Onion family**\n- Leek (seedlings) and spring onion.\n\n**Herbs**\n- Basil (window just opened), chives, coriander and parsley.\n- Dill (last month to sow).\n\nOkra comes into its window in November.\n\n**Frost**\n- At the Melbourne Regional Office, no spring in 126 (1889–2014) has had a frosty night (2 °C or below) after Melbourne Cup Day. The last frost typically falls around 12 August.\n- The latest frost on record was 22 October 1918. In 19 of 20 springs, frosts were over by 25 September.\n- Frost is still possible at ground level, since the thermometer sits about 1.2 m up. If you're in a frostier outer suburb, follow the cool calendar and cover tender seedlings on clear, still nights.\n- Inner and bayside suburbs rarely frost. Olympic Park averages 1.5 frost nights a year, so you can plant tender crops at the early end of each window there."
+    },
+    {
+      "id": 7,
+      "prompt": "When should I plant tomatoes in Auckland?",
+      "toolCalls": [
+        "ToolSearch",
+        "planting_calendar",
+        "frost_risk"
+      ],
+      "toolErrors": 0,
+      "toolsOk": true,
+      "answerOk": true,
+      "pass": true,
+      "tokens": 92161,
+      "costUsd": 0.0758674,
+      "seconds": 10,
+      "answer": "**Plant tomato seedlings in Auckland from September to January.** It's early October now, so you're already in the window.\n\n- **Frost:** Auckland Aero averages about 4.2 ground frosts a year (NIWA, 1991–2020). They fall between May and September, with June at 1.4 and July at 1.9. September averages 0.4, and there are none in October. Auckland is a low-frost area, so planting out now is low risk.\n- **Colder suburbs:** Inland and southern areas get more frost. NIWA records about 14 ground frosts a year at Pukekohe and 27 at Henderson. If you're there, wait until Labour Weekend in late October, which is the traditional planting date. Otherwise, cover the plants on cold nights.\n- **Spacing:** Plant 50–60 cm apart and stake them.\n- **Harvest:** Expect fruit about 8–12 weeks after planting out, which is around March.\n\nIf you plant in the summer months, watch for fruit fly and disease."
+    },
+    {
+      "id": 8,
+      "prompt": "How often does Canberra get a frost after Melbourne Cup Day?",
+      "toolCalls": [
+        "ToolSearch",
+        "frost_risk"
+      ],
+      "toolErrors": 0,
+      "toolsOk": true,
+      "answerOk": true,
+      "pass": true,
+      "tokens": 91386,
+      "costUsd": 0.07477239999999999,
+      "seconds": 12,
+      "answer": "It depends on where in Canberra you are. A \"frosty night\" here means 2 °C or below in the screen, and the two stations give quite different answers.\n\n**Canberra Airport (1939–2009, 71 springs)**\n- A frosty night after Cup Day happened in 36 of 71 springs, which is **51%**.\n- Since 1996 it was 43% of 14 springs.\n- The last frost typically comes around 4 November, in a year when Cup Day falls on 3 November.\n- Frosts were over by 20 November in 4 springs out of 5, and by 11 December in 19 out of 20.\n- The latest frost on record was 27 December 2001.\n\n**Tuggeranong (Isabella Plains) (1997–2025, 27 springs)**\n- A frosty night after Cup Day happened in 8 of 27 springs, which is **30%**.\n- The last frost typically comes around 25 October.\n- Frosts were over by 14 November in 4 springs out of 5, and by 26 November in 19 out of 20.\n- The latest frost on record was 2 December 2025.\n\n**What this means for planting:** Cup Day isn't a safe cut-off in Canberra. Roughly a third to a half of springs still get a frost after it. If you want to be about 95% safe, wait until after about 11 December at the airport, or about 26 November at Tuggeranong. For tender plants like tomatoes, basil and beans, this is the more reliable guide.\n\nThe screen thermometer sits about 1.2 m above the ground. On a clear, still night the ground can be several degrees colder, so a reading of 2 °C can still mean frost on young plants.\n\nSource: GardenMaths analysis of Bureau of Meteorology data via SILO (CC BY 4.0)."
+    },
+    {
+      "id": 9,
+      "prompt": "In Cooma, when does the last frost of spring usually come?",
+      "toolCalls": [
+        "ToolSearch",
+        "frost_risk"
+      ],
+      "toolErrors": 0,
+      "toolsOk": true,
+      "answerOk": true,
+      "pass": true,
+      "tokens": 91051,
+      "costUsd": 0.0727112,
+      "seconds": 10,
+      "answer": "In Cooma the last frost of spring typically comes around **11 December**. That's late, and frost there is close to certain well into spring.\n\nGardenMaths analysed 30 springs (1992–2025) of Bureau of Meteorology data from Cooma Airport:\n\n- **Frost after Melbourne Cup Day:** a frosty night (2 °C or below) came after Cup Day in 29 of 30 springs, or 97%. Since 1996 it's 96% of 28 springs.\n- **Typical last frost:** 11 December, for a year when Cup Day is 3 November.\n- **By 25 December:** frosts were over in 4 springs out of 5.\n- **By 29 December:** frosts were over in 19 springs out of 20.\n- **Latest on record:** 28 December 2004.\n\nThe weather station's thermometer sits about 1.2 m off the ground. On a clear, still night the ground can be several degrees colder, so a reading of 2 °C can still mean frost on young plants.\n\nFor frost-tender plants like tomatoes, basil or beans, I'd wait until late December or protect them with frost cloth. Hardy crops are fine to sow earlier.\n\nSource: GardenMaths analysis of Bureau of Meteorology data via SILO (CC BY 4.0), https://gardenmaths.com/guides/frost-after-melbourne-cup-day/"
+    },
+    {
+      "id": 10,
+      "prompt": "How many 30 L bags of compost do I need to top-dress a round bed 3 m across, 50 mm deep?",
+      "toolCalls": [
+        "ToolSearch",
+        "area_material"
+      ],
+      "toolErrors": 0,
+      "toolsOk": true,
+      "answerOk": true,
+      "pass": true,
+      "tokens": 92159,
+      "costUsd": 0.07382079999999999,
+      "seconds": 8,
+      "answer": "You need **12 bags** of 30 L compost.\n\n- The bed is 7.07 m² (3 m across).\n- At 50 mm deep that's 0.353 m³, or 353.4 L.\n- 353.4 L ÷ 30 L comes to 11.8, so you round up to 12 bags.\n\nThat figure has no allowance for settling. GardenMaths suggests adding 10% extra for settling, which would be about 389 L. That would likely mean 13 bags, so buy 13 if you'd rather have a little spare than run short.\n\nThis is an estimate, so confirm quantities with your supplier before you buy."
+    }
+  ]
+}

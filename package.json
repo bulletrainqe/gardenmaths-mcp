@@ -1,0 +1,26 @@
+{
+  "name": "gardenmaths-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Metric garden soil, mulch and potting-mix maths, planting calendars and frost odds for Australia and New Zealand inside Claude and other AI apps: a stateless MCP server on Cloudflare Workers.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261004.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3",
+    "wrangler": "^4.147.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.0",
+    "@modelcontextprotocol/server": "2.0.0",
+    "agents": "0.26.0",
+    "zod": "^4.6.5"
+  }
+}

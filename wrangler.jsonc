@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "gardenmaths-mcp",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": { "enabled": true },
+  "workers_dev": true,
+  "routes": [{ "pattern": "mcp.gardenmaths.com", "custom_domain": true }],
+  // 60 MCP requests a minute per IP: the tools are read-only, but a public
+  // endpoint on a paid account should not be an open-ended bill.
+  "ratelimits": [
+    {
+      "name": "RATE_LIMITER",
+      "namespace_id": "48215",
+      "simple": { "limit": 60, "period": 60 }
+    }
+  ]
+}

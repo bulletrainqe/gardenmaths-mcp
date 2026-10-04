@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "prompt": "My raised bed is 2 m long, 1 m wide and 30 cm deep. I'll put 5 cm of gravel, then 10 cm of compost, then 15 cm of topsoil. How many litres in total, and how many 30 L bags of each?",
+    "requiredTools": ["raised_bed_soil"],
+    "mustInclude": ["600", "21"]
+  },
+  {
+    "id": 2,
+    "prompt": "For that same 2 m by 1 m, 30 cm deep bed (5 cm gravel, 10 cm compost, 15 cm topsoil): bags cost $9 each, or bulk soil is $85 per cubic metre plus $70 delivery. Which is cheaper?",
+    "requiredTools": ["raised_bed_soil"],
+    "mustInclude": ["189", "121"]
+  },
+  {
+    "id": 3,
+    "prompt": "How much potting mix do I need for two square pots, 60 by 25 cm inside and 27 cm deep, filled to 90%? How many 25 L bags is that?",
+    "requiredTools": ["potting_mix"],
+    "mustInclude": ["72.9"]
+  },
+  {
+    "id": 4,
+    "prompt": "How many 60 L bags of mulch do I need for a 4 m by 2 m garden bed, 75 mm deep?",
+    "requiredTools": ["area_material"],
+    "mustInclude": ["10"]
+  },
+  {
+    "id": 5,
+    "prompt": "I need topsoil for a new lawn area 10 m by 6 m, 100 mm deep. How many tonnes is that, and how many loads in a 6x4 box trailer?",
+    "requiredTools": ["area_material"],
+    "mustInclude": ["7.8", "16"]
+  },
+  {
+    "id": 6,
+    "prompt": "What vegetables can I plant in Melbourne in October?",
+    "requiredTools": ["planting_calendar"],
+    "mustIncludeAny": ["tomato"]
+  },
+  {
+    "id": 7,
+    "prompt": "When should I plant tomatoes in Auckland?",
+    "requiredTools": ["planting_calendar"],
+    "mustIncludeAny": ["september"]
+  },
+  {
+    "id": 8,
+    "prompt": "How often does Canberra get a frost after Melbourne Cup Day?",
+    "requiredTools": ["frost_risk"],
+    "mustIncludeAny": ["51%", "36 of 71", "about half", "half of"]
+  },
+  {
+    "id": 9,
+    "prompt": "In Cooma, when does the last frost of spring usually come?",
+    "requiredTools": ["frost_risk"],
+    "mustIncludeAny": ["11 december", "december 11"]
+  },
+  {
+    "id": 10,
+    "prompt": "How many 30 L bags of compost do I need to top-dress a round bed 3 m across, 50 mm deep?",
+    "requiredTools": ["area_material"],
+    "mustInclude": ["12"]
+  }
+]
